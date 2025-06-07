@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: repeating-linear-gradient(
+    135deg, 
+    #fff, #eee 10%, 
+    #ccc 10%, #bbb 20%, 
+    #999 20%, #888 30%, 
+    #666 30%, #555 40%, 
+    #333 40%, #222 50%, 
+    #111 50%, #000 60%
+  );
+  background-size: 400% 400%;  
+  animation: marbleStripesDiagonal 60s linear infinite;
+
+}
+
+@keyframes marbleStripesDiagonal {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 400% 400%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+@keyframes marbleFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero {
+  animation: fadeInUp 2s ease forwards;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-title {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.subtitle {
+  font-size: 1.3em;
+  margin-bottom: 1em;
+  font-weight: 300;
+}
+
+.description {
+  font-size: 1.1em;
+  margin-bottom: 0.6em;
+}
+
+.highlight {
+  color: #ff4f00;
+  font-weight: 600;
+}
+
+.diamond {
+  color: #ff4f00;
+  font-size: 1.5em;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1.2em;
+  padding: 0.75em 2em;
+  background: #f91500;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background 0.3s ease;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.btn:hover {
+  background: #060100;
+}
